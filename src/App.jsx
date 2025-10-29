@@ -6,14 +6,20 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const state = [
-    {team:"Real Madrid"},
-    {team:"Barcelona"},
-    {team:"Atletico Madrid"}
+    {team:"Real Madrid",
+     shirt:"white"
+    },
+    {team:"Barcelona",
+      shirt:"blue and red"
+    },
+    {team:"Atletico Madrid",
+      shirt:"red and white"
+    }
   ]
 
-  const {team: theBestTeam} = state[0];
+  const {team: theBestTeam, shirt: shirtColor} = state[0];
 
-  const sentence = `We love ${theBestTeam}!`;
+  const sentence = `We love ${theBestTeam}, and the ${shirtColor} shirt!`;
 
   return (
     <>
